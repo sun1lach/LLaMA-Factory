@@ -3,7 +3,7 @@ import os
 
 # device = "cpu"  # the device to load the model onto
 
-model_path = os.path.join(os.getenv("INPUT_MERGE", "/input/merge"), "putput", "merged")
+model_path = os.path.join(os.getenv("INPUT_MERGE", "/input/merge"), "output", "merged")
 print(model_path)
 
 model = AutoModelForCausalLM.from_pretrained(
