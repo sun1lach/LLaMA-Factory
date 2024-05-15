@@ -5,6 +5,8 @@ import os
 
 model_path = os.path.join(os.getenv("INPUT_MERGE", "/input/merge"), "output", "merged")
 print(model_path)
+print(os.environ)
+
 
 model = AutoModelForCausalLM.from_pretrained(
     model_path, torch_dtype="auto", trust_remote_code=True
