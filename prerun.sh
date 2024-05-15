@@ -14,3 +14,6 @@ pip install --upgrade wheel setuptools
 
 # Install the current package
 pip install .
+
+pip freeze
+which pip
