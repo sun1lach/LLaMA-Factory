@@ -3,7 +3,11 @@ import os
 
 # device = "cpu"  # the device to load the model onto
 
-model_path = os.path.join(os.getenv("INPUT_MERGE", "/input/merge"), "output", "merged")
+artifacts_path = os.getenv("INPUT_MERGE", "/input/merge")
+model_path = os.path.join(artifacts_path, "op", "merged")
+if not os.path.exists(artifacts_path):
+    model_path = os.path.join("/cnvrg", "op", "merged")
+
 print(model_path)
 print(os.environ)
 
